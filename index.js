@@ -1,7 +1,7 @@
 
 //5. SEt API URL
 const token = '6492982.38a1db2.ecc895d23d264b6e93d615e88cf4b2b7';
-const API_URL = "https://api.instagram.com/v1/tags/nofilter/media/recent?access_token=6492982.38a1db2.ecc895d23d264b6e93d615e88cf4b2b7";
+const API_URL = "https://api.instagram.com/v1/tags/nofilter/media/recent?access_token=6492982.38a1db2.ecc895d23d264b6e93d615e88cf4b2b7&scope=public_content";
 
 //set access_token
 
