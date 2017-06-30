@@ -1,17 +1,15 @@
 
 //5. SEt API URL
-const API_URL = "https://www.googleapis.com/youtube/v3/search";
+const token = '6492982.38a1db2.ecc895d23d264b6e93d615e88cf4b2b7';
+const API_URL = "https://api.instagram.com/v1/tags/nofilter/media/recent?access_token=6492982.38a1db2.ecc895d23d264b6e93d615e88cf4b2b7";
+
+//set access_token
 
 //4. build the get-results-object
 function getResFromAPI(searchVal, callback) {
   const infoSettings = {
     url: API_URL,
-    data: {
-      resPerPage: 5,
-      part: 'snippet',
-      key:'AIzaSyA4gpg4ivnX-xgjSszRD4D-tF577ZxNCHM',
-      q: `${searchVal}`
-    },
+    cache:false,
     dataType: 'json',
     type: 'GET',
     success: callback
