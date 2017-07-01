@@ -1,15 +1,37 @@
+function showAPIResults(result){
+  let recipesVar = result.recipes;
+  // console.log(result);
+  return `
+        <div class="box">
+        
+          <img src="${result.image_url}" alt="${result.title}">  
+          <div class="boxDescription">
+            <h3>${result.title}</h3>
+            <p>From ${result.publisher}</p>
+          </div>
+        
+        </div>
+  `;
+}
 
-//5. SEt API URL
-const token = '6492982.38a1db2.ecc895d23d264b6e93d615e88cf4b2b7';
-const API_URL = "https://api.instagram.com/v1/tags/nofilter/media/recent?access_token=6492982.38a1db2.ecc895d23d264b6e93d615e88cf4b2b7&scope=public_content";
+function displayAPISearchData(data){
+  // console.log(data);
+  const APIResults = data.recipes.map((item, index) => showAPIResults(item));
+  
+  $('.jq-results')
+    .html(APIResults);
 
-//set access_token
+}
 
-//4. build the get-results-object
 function getResFromAPI(searchVal, callback) {
+  console.log(callback); 
   const infoSettings = {
-    url: API_URL,
-    cache:false,
+    // url: API_URL,
+    url: 'data.json',
+    // data: {
+    //   key:'AIzaSyA4gpg4ivnX-xgjSszRD4D-tF577ZxNCHM',
+    //   q: `${searchVal}`
+    // },
     dataType: 'json',
     type: 'GET',
     success: callback
@@ -18,43 +40,29 @@ function getResFromAPI(searchVal, callback) {
   $.ajax(infoSettings);
 }
 
+function getInputText(){
+  $('button')
+    .on('click', function(ev){
+      ev.preventDefault();
+      var searchedTerm = $('.userInput').val();
+      // console.log(searchedTerm);
+  
+      //deselct input, clear input value
+      $(this)
+        .siblings('.userInput')
+        .trigger('blur')
+        .val('');
+      // deslect button
+      $(this)
+        .siblings('button')
+        .trigger('blur');
+      //clear current result-list
+      $('.jq-results')
+        .html('');
 
 
-//6. Get API results from API
-function showAPIResults(result){
-  console.log(result);
-  return `
-    <a href="https://www.youtube.com/embed/${result.id.videoId}">
-      <img src="${result.snippet.thumbnails.medium.url}">
-      <figcaption>${result.snippet.title}</figcaption>
-    </a>
-  `;
+        getResFromAPI(searchedTerm, displayAPISearchData);
+    });
 }
 
-//5. show the API resultData
-function showAPISearchData(data){
-  // console.log(data);
-  const APIResults = data.items.map((item, index) => showAPIResults(item));
-  $('.jq-results')
-    .html(APIResults);
-
-}
-
-//2. Build the input-text-getter function
-function getInputText() {
-  $('.jq-form').submit(event => {
-        event.preventDefault();
-        const inputItem = $(this).find('.jq-inputItem');
-        const inputVal = inputItem.val();
-
-        //clears the form input
-        inputItem.val("");
-
-//3.take the input & send through API
-        getResFromAPI(inputVal, showAPISearchData);
-
-  });
-}
-
-//1. Grab the input text
 $(getInputText);

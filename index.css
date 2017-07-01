@@ -1,13 +1,57 @@
+header {
+  background-color: rgba(255,255,255, 0.8);
+  /*margin-bottom: 40px;*/
+  position:fixed;
+  width:100%;
+
+}
+
+form{
+	padding:10px;
+	width:100%;
+}
+
+form h1{
+	display:inline-block;
+}
+
+form input{
+	height:50px;
+	width:48%;
+	font-size:18px;	
+}
+
+form input::placeholder{
+	font-size:18px;
+	margin-left:40px;
+}
+
 body {
-  padding-top: 50px;
+  font-family: "Roboto", sans-serif;
+  color: #252525;
 }
 
-.jq-results{
-	display:inline;
+button{
+	height:50px;
+	width:48%;
+	font-size:18px;
+	background-color:transparent;
+	color:gray;
 }
 
-figcaption{
-	width:320px;
-	text-align:center;
-	margin: 0 0 20px 0;
+button:focus {outline:0;}
+
+.box {
+	padding:5px;
+	margin-bottom: 25px;
+}
+
+img {
+  width:100%;
+  border-radius:20px;
+}
+
+
+div.boxDescription {
+  padding: 10px;
 }
