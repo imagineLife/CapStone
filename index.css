@@ -1,8 +1,15 @@
 header {
   background-color: rgba(255,255,255, 0.8);
+<<<<<<< HEAD
   position:fixed;
   width:100%;
   margin:0;
+=======
+  /*margin-bottom: 40px;*/
+  position:fixed;
+  width:100%;
+
+>>>>>>> 973cf4c8767be8b01598625e7021dfa26f6c4039
 }
 
 form{
@@ -16,7 +23,11 @@ form h1{
 
 form input{
 	height:50px;
+<<<<<<< HEAD
 	width:49%;
+=======
+	width:48%;
+>>>>>>> 973cf4c8767be8b01598625e7021dfa26f6c4039
 	font-size:18px;	
 }
 
@@ -26,6 +37,7 @@ form input::placeholder{
 }
 
 body {
+<<<<<<< HEAD
   margin:0;
   font-family: "Roboto", sans-serif;
   color: #252525;
@@ -64,4 +76,33 @@ a {
   padding: 10px;
   color: rgb(245,222,179);
   text-decoration: none;
+=======
+  font-family: "Roboto", sans-serif;
+  color: #252525;
+}
+
+button{
+	height:50px;
+	width:48%;
+	font-size:18px;
+	background-color:transparent;
+	color:gray;
+}
+
+button:focus {outline:0;}
+
+.box {
+	padding:5px;
+	margin-bottom: 25px;
+}
+
+img {
+  width:100%;
+  border-radius:20px;
+}
+
+
+div.boxDescription {
+  padding: 10px;
+>>>>>>> 973cf4c8767be8b01598625e7021dfa26f6c4039
 }

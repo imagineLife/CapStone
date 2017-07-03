@@ -47,29 +47,39 @@
 }
 
 /* Mobile defaults */
+<<<<<<< HEAD
+.col-4, .col-12 {
+=======
 .col-3, .col-4, .col-6, .col-12 {
+>>>>>>> 973cf4c8767be8b01598625e7021dfa26f6c4039
   width: 100%;
 }
 
 
 /* Non-mobile, grid */
 @media only screen and (min-width: 640px) {
+<<<<<<< HEAD
+=======
   /* 3 columns, 3/12 in % */
   .col-3 {
     width: 25%;
   }
+>>>>>>> 973cf4c8767be8b01598625e7021dfa26f6c4039
 
   /* 4 columns */
   .col-4 {
     width: 33.33%;
   }
 
+<<<<<<< HEAD
+=======
   /* 6 columns */
   .col-6 {
     width: 50%;
 
   }
 
+>>>>>>> 973cf4c8767be8b01598625e7021dfa26f6c4039
   /* 12 columns */
   .col-12 {
   }
