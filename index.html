@@ -3,30 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>ThinkfulTube Searcher</title>
+  <title>ThinkRecipeFul</title>
   <script 
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous">
   </script>
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="./float-grid.css" />
 </head>
 
 <body>
+  <header role="banner">
+      <div class ="col-12">
+
+      <form action="#" class="jq-form">
+        <input type="text" name="userInput" class="userInput" placeholder="Find A Recipe">
+        <button>Search</button>
+      </form>
+
+      </div>
+
+  </header>
+
   <main role="main">
-   
-    <h1>Search for ThinkTube Vids</h1>
-   
-    <form action="#" class="jq-form">
-      <label for="query"></label>
-      <input type="text" class="jq-inputItem">
-      <button type="submit">Search</button>
-    </form>
-
-    <h2>Results</h2>
-
-    <div class="jq-results"></div>
-  
+    <div class="jq-results"></div>  
   </main>
 
   <script src="index.js"></script>

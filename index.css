@@ -1,13 +1,67 @@
+header {
+  background-color: rgba(255,255,255, 0.8);
+  position:fixed;
+  width:100%;
+  margin:0;
+}
+
+form{
+	padding:10px;
+	width:100%;
+}
+
+form h1{
+	display:inline-block;
+}
+
+form input{
+	height:50px;
+	width:49%;
+	font-size:18px;	
+}
+
+form input::placeholder{
+	font-size:18px;
+	margin-left:40px;
+}
+
 body {
-  padding-top: 50px;
+  margin:0;
+  font-family: "Roboto", sans-serif;
+  color: #252525;
+  background-image: url('bkgrnd.jpg');
 }
 
-.jq-results{
-	display:inline;
+main {
+	padding-top:80px;
 }
 
-figcaption{
-	width:320px;
-	text-align:center;
-	margin: 0 0 20px 0;
+button{
+	height:50px;
+	width:50%;
+	font-size:18px;
+	background-color:transparent;
+	color:gray;
+	float:right;
+}
+
+button:focus {
+	outline:0;
+}
+
+.box {
+	padding:5px;
+	margin-bottom: 25px;
+}
+
+img {
+  width:100%;
+  border-radius:20px;
+}
+
+
+a {
+  padding: 10px;
+  color: rgb(245,222,179);
+  text-decoration: none;
 }
