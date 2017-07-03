@@ -1,4 +1,4 @@
-const API_URL = `http://food2fork.com/api/search?key=fc12b89d965c74cc2142af6f95d1356a&q=`
+const API_URL = `https://food2fork.com/api/search?key=fc12b89d965c74cc2142af6f95d1356a&q=`
 function displayAPISearchData(data){
     let recipesVar = data.recipes;
     let APIResults = "";
