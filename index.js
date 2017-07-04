@@ -33,7 +33,7 @@ function getResFromAPI(searchVal, callback) {
   const infoSettings = {
     url: API_URL+`${searchVal}`,
     // url: 'data.json',
-    dataType: 'json',
+    dataType: 'jsonp',
     type: 'GET',
     success: callback
   }
