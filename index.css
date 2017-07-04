@@ -6,23 +6,23 @@ header {
 }
 
 form{
-	padding:10px;
-	width:100%;
+  padding:10px;
+  width:100%;
 }
 
 form h1{
-	display:inline-block;
+  display:inline-block;
 }
 
 form input{
-	height:50px;
-	width:49%;
-	font-size:18px;	
+  height:50px;
+  width:49%;
+  font-size:18px; 
 }
 
 form input::placeholder{
-	font-size:18px;
-	margin-left:40px;
+  font-size:18px;
+  margin-left:40px;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
 }
 
 main {
-	padding-top:80px;
+  padding-top:80px;
 }
 
 button{
@@ -52,8 +52,8 @@ button:hover {
 }
 
 .box {
-	padding:5px;
-	margin-bottom: 25px;
+  padding:5px;
+  margin-bottom: 25px;
 }
 
 img {
