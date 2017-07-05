@@ -1,4 +1,4 @@
-const API_URL = `https://food2fork.com/api/search?key=fc12b89d965c74cc2142af6f95d1356a&q=`
+const API_URL = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=30&tags=`
 function displayAPISearchData(data){
     let recipesVar = data.recipes;
     let APIResults = "";
@@ -7,11 +7,11 @@ function displayAPISearchData(data){
         const rowBeginning = `<div class="row">`;
         const rowEnding = `</div>`;
         let boxItem = `<div class="box col-4">
-                <a href="${recipesVar[i].source_url}" target="_blank">
-                  <img src="${recipesVar[i].image_url}" alt="${recipesVar[i].title}">  
+                <a href="${recipesVar[i].sourceUrl}" target="_blank">
+                  <img src="${recipesVar[i].image}" alt="${recipesVar[i].title}">  
                   <div class="boxDescription">
                     <h3>${recipesVar[i].title}</h3>
-                    <p>From ${recipesVar[i].publisher}</p>
+                    <p>From ${recipesVar[i].sourceName}</p>
                   </div>
                 </a>
               </div>`;
@@ -24,20 +24,21 @@ function displayAPISearchData(data){
           APIResults += boxItem;
         }
     }
-        console.log(APIResults);
+        // console.log(APIResults);
         $('.jq-results')
           .html(APIResults);
 }
 
 function getResFromAPI(searchVal, callback) {
   const infoSettings = {
-    url: API_URL+`${searchVal}`,
-    // url: 'data.json',
-    dataType: 'jsonp',
-    type: 'GET',
-    success: callback
-  }
-
+    url: API_URL+`${searchVal}`, // The URL to the API. You can get this in the API page of the API you intend to consume   
+    dataType: 'json',
+    success: callback,
+    error: function(err) { alert(err); },
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("X-Mashape-Authorization", "Dw5Du2x9f1mshumfYcTmv8RduW9Op1On2QIjsnwkVvyQwCuMSb");
+    }
+  };
   $.ajax(infoSettings);
 }
 
