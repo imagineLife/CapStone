@@ -44,6 +44,7 @@ button{
   background-color: #9F9B98;
   text-shadow: -1px 1px #8B8885;
   border: none;
+  float:right;
 }
 
 button:hover {
@@ -59,10 +60,21 @@ button:hover {
 img {
   width:100%;
   border-radius:20px;
+  max-height:190px;
+  object-fit: cover;
 }
 
 
 a {
   color: rgb(245,222,179);
   text-decoration: none;
+}
+
+p {
+  padding:0;
+  margin:0;
+}
+
+h3{
+  line-height:1.4;
 }

@@ -52,8 +52,8 @@ function getInputText(){
       //deselct input, clear input value
       $(this)
         .siblings('.userInput')
-        .trigger('blur')
-        .val('');
+        .trigger('blur');
+        // .val('');
       $(this)
         .siblings('button')
         .trigger('blur');
