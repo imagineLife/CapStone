@@ -7,7 +7,7 @@ function displayAPISearchData(data){
         const rowBeginning = `<div class="row">`;
         const rowEnding = `</div>`;
         let boxItem = `<div class="box col-4">
-                <a href="${recipesVar[i].sourceUrl}" target="_blank">
+                <a href="${recipesVar[i].sourceUrl}" target="_blank" class="tooltip" title="Ready in ${recipesVar[i].readyInMinutes} Minutes">
                   <img src="${recipesVar[i].image}" alt="${recipesVar[i].title}">  
                   <div class="boxDescription">
                     <h3>${recipesVar[i].title}</h3>
@@ -53,7 +53,6 @@ function getInputText(){
       $(this)
         .siblings('.userInput')
         .trigger('blur');
-        // .val('');
       $(this)
         .siblings('button')
         .trigger('blur');
